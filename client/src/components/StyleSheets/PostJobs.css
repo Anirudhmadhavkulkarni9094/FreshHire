@@ -1,0 +1,71 @@
+/* PostJobs.css */
+
+.job-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .job-form {
+    margin: 2% 0%;
+    display: flex;
+    flex-direction: column;
+    width: 120%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .job-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0078d4; /* Microsoft Blue */
+  }
+  
+  .job-form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333; /* Dark text color */
+  }
+  
+  .job-form input,
+  .job-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333; /* Dark text color */
+  }
+  
+  .job-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .job-form button {
+    padding: 10px 20px;
+    background-color: #0078d4; /* Microsoft Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .job-form button:hover {
+    background-color: #005a9e; /* Darker shade on hover */
+  }
+  
+  /* Media Query for smaller screens */
+  @media (max-width: 600px) {
+    .job-form {
+      width: 95%;
+    }
+  }
+  

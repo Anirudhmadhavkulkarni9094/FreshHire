@@ -1,0 +1,106 @@
+.job-postings-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin:0% 2%;
+}
+
+.job-posting {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-logo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0073b1; /* LinkedIn blue */
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}
+
+.job-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.company-info {
+  flex: 1;
+}
+
+.company-name {
+  font-weight: bold;
+  color: #0073b1; /* LinkedIn blue */
+}
+
+.job-location {
+  color: #555;
+}
+
+.job-salary {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.job-description {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.requirements {
+  color: #333;
+  line-height: 1.6;
+}
+
+.requirement-item {
+  margin-bottom: 5px;
+}
+
+.card-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #0073b1; /* LinkedIn blue */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #0081cc !important; /* Darker shade of LinkedIn blue on hover */
+  color: #ddd;
+}
+
+.job-posting a{
+  height: 3rem;
+  width: 8rem;
+}
+
+.errorHandling{
+  width: max-content; /* Set the width to the content's width */
+  margin: 0; /* Remove any margin that may affect the vertical positioning */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
