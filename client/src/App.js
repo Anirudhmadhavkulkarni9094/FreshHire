@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import AdminLogin from './components/Login/AdminLogin';
 import JobPostingsList from './components/JobPostingsList';
-import { useHistory } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import Home from './components/Home';
 import { useState } from 'react';
