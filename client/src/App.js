@@ -36,7 +36,7 @@ function App() {
           setUserAuth(false);
           setAdminAuth(false);
             // Redirect to the home page after logging out
-            window.location.href = "/home";
+            window.location.href = "/";
         })
         .catch((error) => {
           console.error(error); // Handle errors if any
