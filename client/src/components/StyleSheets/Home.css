@@ -27,8 +27,9 @@
   
   .about-container {
     max-width: 800px;
-    margin: 3rem auto;
+    margin: auto;
     text-align: left;
+    padding: 2rem;
 
    
   }
