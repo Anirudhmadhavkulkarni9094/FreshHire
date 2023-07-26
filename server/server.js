@@ -8,8 +8,7 @@ const JobPost = require('./Model/JobListingModel');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
-const { Admin } = require('mongodb');
-const User = require('./Model/UserModel');
+
 
 app.use(cors());
 
