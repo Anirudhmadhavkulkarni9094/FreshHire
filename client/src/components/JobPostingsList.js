@@ -20,7 +20,7 @@ function JobPostingsList() {
     }, []);
   return (
     <div>
-      {jobPostings.length!=0 ? jobPostings.map((jobPosting, index) => (
+      {jobPostings.length!==0 ? jobPostings.map((jobPosting, index) => (
         <JobCard key={index} jobPosting={jobPosting} />
       )) : <h1 className='errorHandling'>Unauthorized access, Login first</h1>}
     </div>

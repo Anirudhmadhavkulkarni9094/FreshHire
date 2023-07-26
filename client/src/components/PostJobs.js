@@ -21,7 +21,7 @@ function PostJobs({Authorization}) {
     });
   };
 
-  const [feedback, setFeedback] = useState('');
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,7 +32,7 @@ function PostJobs({Authorization}) {
         // Handle the response from the server if needed
         console.log('Job posted successfully:', response.data.message);
         if (response.data.message === 'Job Posted successfully') {
-          setFeedback('Job Posted successfully');
+          
           // Use the 'feedback' variable directly here, not inside the alert function
           alert('Job Posted successfully');
           setJob({
@@ -46,7 +46,7 @@ function PostJobs({Authorization}) {
 
           })
         } else {
-          setFeedback('Job post failed');
+          
           // Use the 'feedback' variable directly here, not inside the alert function
           alert('Job post failed');
         }
@@ -54,7 +54,7 @@ function PostJobs({Authorization}) {
       .catch(error => {
         // Handle any errors that occurred during the request
         console.error('Error posting job:', error);
-        setFeedback('Job post failed');
+        
         // Use the 'feedback' variable directly here, not inside the alert function
         alert('Job post failed');
       });

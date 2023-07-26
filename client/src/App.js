@@ -13,7 +13,7 @@ import StudentCard from './components/StudentCard'
 import axios from 'axios';
 
 function App() {
-  let history= useHistory();
+ 
   const [Adminauth, setAdminAuth] = useState(false);
   const [Userauth, setUserAuth] = useState(false);
 

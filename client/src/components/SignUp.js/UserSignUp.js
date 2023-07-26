@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../StyleSheets/SignUp.css'; // Import custom CSS file for styling
 
 function SignUp() {

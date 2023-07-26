@@ -20,7 +20,7 @@ function JobCard({ jobPosting }) {
             <br />
             Salary: {salary} per annum
           </p>
-          <a href="" className="btn btn-outline-primary">
+          <a href="/" className="btn btn-outline-primary">
            <p>Apply Now</p> 
           </a>
         </div>
