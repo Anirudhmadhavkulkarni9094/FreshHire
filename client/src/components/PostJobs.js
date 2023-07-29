@@ -27,7 +27,7 @@ function PostJobs({Authorization}) {
     event.preventDefault();
     // Assuming 'job' contains the data you want to post
 
-    axios.post('http://localhost:3001/post-jobs', job)
+    axios.post('https://server-axhf.onrender.com/post-jobs', job)
       .then(response => {
         // Handle the response from the server if needed
         console.log('Job posted successfully:', response.data.message);

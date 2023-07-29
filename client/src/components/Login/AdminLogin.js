@@ -17,7 +17,7 @@ function AdminLogin({ onHandle, title }) {
     const data = { email, password };
 
     try {
-      const response = await axios.post('http://localhost:3001/Admin-login', data);
+      const response = await axios.post('https://server-axhf.onrender.com/Admin-login', data);
       const result = response.data;
 
       if (result.success) {

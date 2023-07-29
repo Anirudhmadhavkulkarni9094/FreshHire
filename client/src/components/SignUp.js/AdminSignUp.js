@@ -31,7 +31,7 @@ function AdminSignUp() {
     event.preventDefault();
 
     // Make API call to register the admin
-    axios.post('http://localhost:3001/Add-Admin', formData)
+    axios.post('https://server-axhf.onrender.com/Add-Admin', formData)
       .then((response) => {
         console.log('Admin registered successfully:', response.data);
         // Handle success, redirect to a success page, or perform other actions as needed

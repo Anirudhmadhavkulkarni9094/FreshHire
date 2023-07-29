@@ -27,7 +27,7 @@ function SignUp() {
     e.preventDefault();
 
     // Make API call to register the user
-    axios.post('http://localhost:3001/Add-User', formData)
+    axios.post('https://server-axhf.onrender.com/Add-User', formData)
       .then((response) => {
         console.log('User registered successfully:', response.data);
         // Handle success, redirect to a success page, or perform other actions as needed

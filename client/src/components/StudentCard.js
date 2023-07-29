@@ -8,7 +8,7 @@ function StudentCard() {
   const [Student , setStudent] = useState([]);
 
   useEffect(()=>{
-    axios.get('http://localhost:3001/getStudent').then(res=>{
+    axios.get('https://server-axhf.onrender.com/getStudent').then(res=>{
       setStudent(res.data.data)
     })
   },[])
