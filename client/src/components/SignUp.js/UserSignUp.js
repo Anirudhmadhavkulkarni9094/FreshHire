@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../StyleSheets/SignUp.css';
+import {useHistory} from 'react-router-dom';
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ function SignUp() {
     stream: '',
     Cover: '',
   });
-
+  const history = useHistory();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -41,7 +42,7 @@ function SignUp() {
           stream: '',
           Cover: '',
         });
-        window.location.href = '/User-login'
+        history.push('/user-login');
 
       })
       .catch((error) => {

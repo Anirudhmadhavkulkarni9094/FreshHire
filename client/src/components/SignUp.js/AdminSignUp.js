@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../StyleSheets/SignUp.css'; // Import the same SignUp.css file for styling
+import {useHistory} from 'react-router-dom';
+
 
 function AdminSignUp() {
   const initialFormData = {
@@ -14,7 +16,7 @@ function AdminSignUp() {
 
   const [formData, setFormData] = useState(initialFormData);
   const [error, setError] = useState('');
-
+  const history = useHistory();
   // Function to handle form field changes
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -36,13 +38,15 @@ function AdminSignUp() {
         alert('Admin signed up successfully');
         setFormData(initialFormData); // Reset the form after successful submission
         setError(''); // Reset the error message
-        window.location.href = '/Admin-login';
+        
       })
       .catch((error) => {
         console.error('Error registering admin:');
         // Handle error, display error message to the user
         setError('An error occurred. Please try again later.' + error);
-      });
+      }).finally(
+        history.push('/')
+        );
   };
 
   return (
