@@ -52,29 +52,29 @@ function App() {
         <NavBar adminAuth = {Adminauth} userAuth={Userauth} handleAuth = {handleAuth}/>
         {/* <PostJobs></PostJobs> */}
         <Switch>
-        <Route path='https://main--freshire.netlify.app/Sign-Up'>
+        <Route path='/Sign-Up'>
             <MainSignUp/>
           </Route>
-          <Route path='https://main--freshire.netlify.app/admin-login'>
+          <Route path='/admin-login'>
             <AdminLogin onHandle={handleAdminAuth}  title = 'Admin'/>
           </Route>
-          <Route path='https://main--freshire.netlify.app/Post-Job'>
+          <Route path='/Post-Job'>
             <PostJobs Authorization = {Adminauth}/>
           </Route>
-          <Route path='https://main--freshire.netlify.app/User-login'>
+          <Route path='/User-login'>
             <UserLogin  onHandle={handleUserAuth}  title = 'User'/>
           </Route>
-          <Route path='https://main--freshire.netlify.app/full-job'>
+          <Route path='/full-job'>
             <JobPostingsList />
           </Route>
           <Route path='/Hire-talent'>
             <StudentCard></StudentCard>
           </Route>
           {/* Default route */}
-          <Route path='https://main--freshire.netlify.app/Home'>
+          <Route path='/Home'>
             <Home/>
           </Route>
-          <Route exact path='https://main--freshire.netlify.app/'>
+          <Route exact path='/'>
             <Home/>
           </Route>
           

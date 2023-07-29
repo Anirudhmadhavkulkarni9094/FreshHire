@@ -9,7 +9,7 @@ function JobPostingsList() {
     const [jobPostings, setjobPostings] = useState([]);
 
     useEffect(() => {
-      axios.get('https://server-axhf.onrender.com/showJobs')
+      axios.get('http://localhost:3001/showJobs')
         .then(res => {
           console.log(res.data.data);
           setjobPostings(res.data.data);
