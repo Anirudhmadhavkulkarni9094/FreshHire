@@ -25,3 +25,11 @@
     width: 20%;
     border-radius: 50%;
 }
+.errorHandling{
+    width: max-content; /* Set the width to the content's width */
+    margin: 0; /* Remove any margin that may affect the vertical positioning */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

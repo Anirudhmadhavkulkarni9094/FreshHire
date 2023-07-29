@@ -15,7 +15,6 @@ const AdminSchema = new mongoose.Schema({
   phoneNumber: { // Fix the property name here
     type: Number,
     required: true,
-    unique: true
   },
   password: { // Fix the property name here
     type: String,

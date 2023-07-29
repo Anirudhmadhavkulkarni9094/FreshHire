@@ -1,83 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./StyleSheets/StudentCard.css";
 import img from "./img/Profile.png";
+import axios from 'axios';
 
 function StudentCard() {
   
-  const students = [
-    {
-      name: "Anirudh Kulkarni",
-      degree: "EIE",
-      skills: "html, css, js, node, react",
-      experience: "6 months",
-    },
-    {
-      name: "Jessica Lee",
-      degree: "Computer Science",
-      skills: "python, java, C++, data structures",
-      experience: "1 year",
-    },
-    {
-      name: "Michael Johnson",
-      degree: "Mechanical Engineering",
-      skills: "CAD, SolidWorks, Matlab, thermodynamics",
-      experience: "2 years",
-    },
-    {
-      name: "Sarah Williams",
-      degree: "Electrical Engineering",
-      skills: "C, C#, VHDL, FPGA",
-      experience: "9 months",
-    },
-    {
-      name: "John Smith",
-      degree: "Business Administration",
-      skills: "marketing, finance, project management",
-      experience: "3 years",
-    },
-    {
-      name: "Emily Chen",
-      degree: "Chemistry",
-      skills: "lab techniques, analytical chemistry",
-      experience: "1.5 years",
-    },
-    {
-      name: "David Brown",
-      degree: "Biomedical Engineering",
-      skills: "biomaterials, medical devices, anatomy",
-      experience: "1 year",
-    },
-    {
-      name: "Jennifer White",
-      degree: "Mathematics",
-      skills: "statistics, calculus, data analysis",
-      experience: "2 years",
-    },
-    {
-      name: "Kevin Garcia",
-      degree: "Computer Engineering",
-      skills: "verilog, FPGA, embedded systems",
-      experience: "1.5 years",
-    },
-    {
-      name: "Sophia Miller",
-      degree: "English Literature",
-      skills: "writing, editing, literary analysis",
-      experience: "6 months",
-    },
-    {
-      name: "Daniel Kim",
-      degree: "Environmental Science",
-      skills: "climate modeling, GIS, sustainability",
-      experience: "2 years",
-    },
-    // Add more student data here...
-  ];
+  const [Student , setStudent] = useState([]);
+
+  useEffect(()=>{
+    axios.get('http://localhost:3001/getStudent').then(res=>{
+      setStudent(res.data.data)
+    })
+  },[])
   
 
   return (
     <>
-      {students.map((student, index) => (
+      {Student && Student.length > 1 ? Student.map((student, index) => (
         <div key={index}>
           <div className="card student">
             <div className="row">
@@ -85,9 +24,10 @@ function StudentCard() {
               <h5 className="col-8">{student.name}</h5>
             </div>
             <div className="card-body">
-              <p>Degree: {student.degree}</p>
+              <p>College: {student.college}</p>
+              <p>Degree: {student.stream}</p>
               <p>Skills: {student.skills}</p>
-              <p>Experience: {student.experience}</p>
+              
             </div>
             <div className="accordion" id={`accordionExample${index}`}>
               <div className="accordion-item">
@@ -109,22 +49,14 @@ function StudentCard() {
                   data-bs-parent={`#accordionExample${index}`}
                 >
                   <div className="accordion-body">
-                    <strong>This is the third item's accordion body.</strong>{" "}
-                    It is hidden by default, until the collapse plugin adds the
-                    appropriate classes that we use to style each element. These
-                    classes control the overall appearance, as well as the showing
-                    and hiding via CSS transitions. You can modify any of this
-                    with custom CSS or overriding our default variables. It's also
-                    worth noting that just about any HTML can go within the{" "}
-                    <code>.accordion-body</code>, though the transition does limit
-                    overflow.
+                    <p>{student.Cover}</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      ))}
+      )) :<h5 className="errorHandling">Login as Admin to view this page</h5>} 
     </>
   );
 }

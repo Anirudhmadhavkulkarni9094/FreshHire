@@ -75,18 +75,18 @@ function NavBar({ adminAuth, userAuth , handleAuth }) {
               </li>
             )}
             {userAuth || adminAuth ? (
-  <li className="nav-item">
-    <button onClick={handleAuth} className="nav-link btn btn-primary">
-      Log out
-    </button>
-  </li>
-) : (
-  <li className="nav-item">
-    <Link className="nav-link btn btn-primary" to="/Sign-Up">
-      Sign Up
-    </Link>
-  </li>
-)}
+              <li className="nav-item">
+                <button onClick={handleAuth} className="nav-link btn btn-primary">
+                  Log out
+                </button>
+              </li>
+            ) : (
+              <li className="nav-item">
+                <Link className="nav-link btn btn-primary" to="/Sign-Up">
+                  Sign Up
+                </Link>
+              </li>
+            )}
 
           </ul>
         </div>

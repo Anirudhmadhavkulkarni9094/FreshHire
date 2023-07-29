@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
     required: true
   },
   skills: {
-    type: String,
+    type: [String],
     required: true
   },
   college: {
@@ -30,6 +30,10 @@ const userSchema = new mongoose.Schema({
   stream: {
     type: String,
     required: true
+  },
+  Cover : {
+    type : String,
+    required : true
   }
 });
 
