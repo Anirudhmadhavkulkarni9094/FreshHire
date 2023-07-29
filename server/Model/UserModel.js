@@ -33,7 +33,7 @@ const userSchema = new mongoose.Schema({
   },
   Cover : {
     type : String,
-    required : true
+  
   }
 });
 

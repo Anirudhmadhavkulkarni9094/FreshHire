@@ -229,17 +229,18 @@ app.get('/getStudent' , AdminAuthMiddleware ,async (req,res)=>{
 
 app.post('/Add-User', async (req, res) => {
   try {
-    const { name, email,password, skills, college, stream ,Cover} = req.body;
+    const { name, email,phonenumber,password, skills, college, stream ,Cover} = req.body;
     
     // You should use the User model defined in your schema
     const newUser = new user({
       name,
       email,
+      phonenumber,
       password,
       skills,
       college,
       stream,
-      Cover
+      Cover,
     });
 
     // Save the new user object to the database
@@ -258,11 +259,11 @@ app.post('/Add-User', async (req, res) => {
 
 app.post('/Add-Admin', async (req, res) => {
   try {
-    
+    // Validate the input data using Joi or express-validator (not shown in this code)
 
     // Create a new admin object using the admin model
     const newAdmin = new admin(req.body);
-    console.log(newAdmin)
+    console.log(newAdmin);
 
     // Save the new admin object to the database
     await newAdmin.save();
@@ -271,11 +272,13 @@ app.post('/Add-Admin', async (req, res) => {
       message: "Admin added successfully",
     });
   } catch (err) {
+    console.error('Error adding admin:', err);
     res.status(500).json({
-      message: "Admin cannot be added: " + err.message,
+      message: "Unable to add admin. Please try again later.",
     });
   }
 });
+
 
 app.listen(3001, () => {
   console.log("App running at port 3001");

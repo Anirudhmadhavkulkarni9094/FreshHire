@@ -39,9 +39,9 @@ function AdminSignUp() {
         window.location.href = '/Admin-login';
       })
       .catch((error) => {
-        console.error('Error registering admin:', error.response.data);
+        console.error('Error registering admin:');
         // Handle error, display error message to the user
-        setError(error.response.data.message || 'An error occurred. Please try again later.');
+        setError('An error occurred. Please try again later.' + error);
       });
   };
 
