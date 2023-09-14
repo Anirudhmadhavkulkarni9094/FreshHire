@@ -279,6 +279,12 @@ app.post('/Add-Admin', async (req, res) => {
   }
 });
 
+app.get('/health' , (req ,res)=>{
+  res.json({
+    message : "app is healthy and working"
+  })
+})
+
 
 app.listen(3001, () => {
   console.log("App running at port 3001");
