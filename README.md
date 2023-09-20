@@ -1,5 +1,5 @@
-# FreshHire: deployment link : https://main--freshire.netlify.app/
-Introduction
+## FreshHire: deployment link: https://main--freshire.netlify.app/
+# Introduction
 FreshHire is a user-friendly and intuitive website that aims to bridge the gap between job seekers and employers. Our platform provides an easy-to-use interface for job seekers to browse through job listings, apply for positions, and manage their applications efficiently. Employers can post job openings, review applications, and find the perfect candidates for their organizations.
 
 #Features
